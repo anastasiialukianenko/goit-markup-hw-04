@@ -121,21 +121,22 @@ padding-bottom: 24px;
         font-style: normal;
         letter-spacing: 0.02em;}
 
-.nav-link:hover, 
-.nav-link:focus,
-.adress-link:hover, 
-.adress-link:focus{
+.nav-link:is(:hover, :focus),.adress-link:is(:hover, :focus){
     color: var(--hover-color);
 }
 
+
 /* Hero */
 .hero-section{
+    max-width: 1440px;
+    margin: 0 auto;
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
     background-color: var(--hero-background-color);
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
    background-position: center;
 }
 
@@ -159,6 +160,7 @@ min-width: 169px;
 text-align: center;
 border: none;
 cursor: pointer;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     font-family: inherit;
     color: #FFFFFF;
@@ -170,11 +172,9 @@ cursor: pointer;
 
 }
 
-.hero-button:hover,
-.hero-button:focus {
-    background-color: var(--hover-color);}
-    
-
+.hero-button:is(:hover,:focus){
+    background-color: var(--hover-color);
+}
  /* < -Our features-> */
  .features-list{
     display: flex;
@@ -267,10 +267,13 @@ width: calc((100%-72px)/4);
     margin-right: 24px;
 
     background-color: var(--primary-background-color);
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
 }
  .team-list {
      display: flex;
  }
+
  .section-team-item:last-child{
      margin-right: 0px;}
 
@@ -451,6 +454,8 @@ fill:currentColor
         color: #FFFFFF;
         background-color:#404BBF;
         border-color: transparent;
+
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     }
 
 /* < !--Galaery of works--> */
@@ -465,12 +470,20 @@ fill:currentColor
     width: calc((100%-120px)/6);;
     margin-right: 24px;
     margin-bottom: 48px;
+
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .gallery-item:nth-child(3n){
     margin-right: 0px;}
 
 .gallery-item:nth-last-child(-n + 3){
             margin-bottom: 0px;
+}
+
+.gallery-item:is(:hover, :focus) .portfolio-description {
+    border: 0.5px solid #F4F4FD;
+    border-top: none;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-description{
