@@ -196,6 +196,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     margin-bottom:8px;
 
     background-color: #F4F4FD;
+    border-radius: 4px;
 }
 
 .title{
@@ -264,11 +265,11 @@ font-weight: 500;
 }
 .section-team-item{
 width: calc((100%-72px)/4);
-    margin-right: 24px;
+margin-right: 24px;
 
-    background-color: var(--primary-background-color);
+background-color: var(--primary-background-color);
 box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 0px 0px 4px 4px;
+border-radius: 0px 0px 4px 4px;
 }
  .team-list {
      display: flex;
@@ -280,6 +281,8 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
    .team-description{
     padding-top: 32px;
     padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
    }
 
 .team-subtitle{
@@ -460,19 +463,22 @@ fill:currentColor
 
 /* < !--Galaery of works--> */
 .portfolio-link {
-    color: var(--primary-text-color);}
+    color: var(--primary-text-color);
+    display: block;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
 .gallery-list {
     display: flex;
     flex-wrap: wrap;
 }
 
 .gallery-item{
-    width: calc((100%-120px)/6);;
+    width: calc((100% - 48px)/3);;
     margin-right: 24px;
     margin-bottom: 48px;
-
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
+
 .gallery-item:nth-child(3n){
     margin-right: 0px;}
 
@@ -480,9 +486,7 @@ fill:currentColor
             margin-bottom: 0px;
 }
 
-.gallery-item:is(:hover, :focus) .portfolio-description {
-    border: 0.5px solid #F4F4FD;
-    border-top: none;
+.portfolio-link:is(:hover, :focus){
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
@@ -490,6 +494,7 @@ fill:currentColor
 padding-top: 32px;
 padding-bottom: 32px;
 padding-left: 16px;
+padding-right: 16px;
 border: 1px solid #E7E9FC;
 border-top: none;
 
